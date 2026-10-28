@@ -8,9 +8,9 @@ namespace Trip.Controllers;
 [Route("[controller]")]
 public class MemberController : ControllerBase
 {
-    private readonly MemberContext _context;
+    private readonly TripDbContext _context;
 
-    public MemberController(MemberContext context)
+    public MemberController(TripDbContext context)
     {
         _context = context;
     }
