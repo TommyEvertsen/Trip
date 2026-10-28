@@ -2,9 +2,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Trip.Models;
 
-public class MemberContext : DbContext
+public class TripDbContext : DbContext
 {
-   public MemberContext(DbContextOptions<MemberContext> options)
+    public TripDbContext(DbContextOptions<TripDbContext> options)
         : base(options)
     {
     }
@@ -19,4 +19,3 @@ public class MemberContext : DbContext
             .WithMany(t => t.Members);
     }
 }
-
