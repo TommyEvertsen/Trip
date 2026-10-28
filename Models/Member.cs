@@ -2,10 +2,12 @@ namespace Trip.Models;
 
 public class Member
 {
-    private long Id {get ; set;}
-    private string? FirstName {get; set;}
-    private string? LastName {get; set;}
-    private DateOnly DateOfBirth {get; set;}
+    public long Id { get; set; }
+    public string? FirstName { get; set; }
+    public string? LastName { get; set; }
+    public string UserName { get; set; } = null!;
+    public DateOnly DateOfBirth { get; set; }
+    public ICollection<Trip>? Trips { get; set; } = new List<Trip>();
 
 }
 
